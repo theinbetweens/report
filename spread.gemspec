@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "spread"
   s.version     = Spread::VERSION
   s.authors     = ["Warren Sangster"]
-  #s.homepage    = "TODO"
+  
   s.summary     = "Generate a CSV version of a database table"
   s.description = "Generate a CSV version of a database table"
 
