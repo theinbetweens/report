@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     spread (0.0.1)
-      rails (~> 3.2.22)
+      rails (~> 3.2.16)
 
 GEM
   remote: https://rubygems.org/
