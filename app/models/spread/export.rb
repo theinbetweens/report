@@ -1,11 +1,9 @@
 module Spread
-
   class Export
+    # attr_accessible :title, :body
 
-    def initialize(primary_model)
-      
+    def initialize
     end
 
   end
-
 end
