@@ -25,18 +25,25 @@ module Spread
               'product' => {
                 'name' => '1',
                 'slug' => '1',
-                'created_on' => '1'
+                'created_at' => '1'
               }
             },
             report_conditions: {
               'product_name' => { accessor: 'name', table: 'products', comparison: '', value: '', active: '0' },
-              'product_slug' => { accessor: 'slug', table: 'products', comparison: '', value: '', active: '0' },
-              'product_created_on' => { accessor: 'created_on', table: 'products', comparison: '>', value: 'start_date', active: '1' }
+              'product_slug' => { accessor: 'slug', table: 'products', comparison: '', value: '', active: '0' }#,
+              #'product_created_at' => { accessor: 'created_at', table: 'products', comparison: '>', value: 'start_date', active: '1' }
             }
           )
         end
+
         let(:subject) do 
           Export.create(report_template: report_template)
+        end
+
+        before(:each) do
+          2.times do |i|
+            Product.create(name: 'Ball-'+i.to_s)
+          end
         end
 
         it 'returns 2 rows' do

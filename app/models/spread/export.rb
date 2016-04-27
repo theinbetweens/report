@@ -8,6 +8,14 @@ module Spread
     # def initialize
     # end
 
+    def header
+      results = []
+      report_template.report_table_columns.each do |key,values|
+        results += values.keys
+      end
+      results
+    end    
+
     def preview
       primary_model.joins(inner_joins).select(select).where(where_condition).limit(30).collect do |x|
         header.collect {|accessor| x[accessor] }
