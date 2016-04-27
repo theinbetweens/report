@@ -1,3 +1,4 @@
+
 module Spread
   module Spread
     def self.table_name_prefix
