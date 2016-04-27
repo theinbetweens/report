@@ -6,9 +6,7 @@ module Spread
     describe '#initialize' do
 
       it "doesn't raise an error" do
-        expect{
-          Spree::Export.new
-        }.should_not raise_error
+        expect { Spread::Export.new }.not_to raise_error
       end
 
     end
